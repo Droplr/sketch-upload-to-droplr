@@ -1,7 +1,7 @@
 Sketch plugin: Upload to Droplr
 =================
 
-A Sketch app (https://www.sketchapp.com) plugin to upload the selected artboard to Droplr (https://droplr.com/).
+A [Sketch app](https://www.sketchapp.com) plugin to upload the selected artboard to [Droplr](https://droplr.com/).
 
 ## Installation
 
@@ -21,4 +21,4 @@ Send any comments, concerns, or suggestions to [james@hellomethod.co.uk](mailto:
 
 ## Thanks
 
-Thanks to Mike over at delighted.com for the basis of this plugin taken from his sketch-upload-to-cloudapp (https://github.com/delighted/sketch-upload-to-cloudapp)
+Thanks to Mike over at delighted.com for the basis of this plugin taken from his [sketch-upload-to-cloudapp](https://github.com/delighted/sketch-upload-to-cloudapp)

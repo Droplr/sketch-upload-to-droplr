@@ -2,7 +2,7 @@
 //
 // Sketch plugin to upload the selected artboard to Droplr.
 //
-// Original code take from Mike Gowen, Delighted Inc. (https://github.com/delighted/sketch-upload-to-cloudapp)
+// Original code taken from Mike Gowen, Delighted Inc. (https://github.com/delighted/sketch-upload-to-cloudapp)
 // Copyright (c) 2017 James Roberts
 
 onRun = function (context) {

@@ -16,9 +16,8 @@
     ]
   },
   "identifier" : "uk.co.hellomethod.upload-to-droplr",
-  "version" : "2.1.2",
+  "version" : "1.0.0",
   "description" : "Sketch plugin to upload the selected artboard to Droplr.",
   "authorEmail" : "james@hellomethod.co.uk",
   "name" : "Upload to Droplr"
 }
-

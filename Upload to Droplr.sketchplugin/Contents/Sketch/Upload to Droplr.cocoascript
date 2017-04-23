@@ -1,0 +1,63 @@
+// Upload to Droplr
+//
+// Sketch plugin to upload the selected artboard to Droplr.
+//
+// Original code take from Mike Gowen, Delighted Inc. (https://github.com/delighted/sketch-upload-to-cloudapp)
+// Copyright (c) 2017 James Roberts
+
+onRun = function (context) {
+
+  doc = context.document
+  selection = context.selection
+  currentArtboard = doc.currentPage().currentArtboard()
+  selectionArtboards = getArtboardsFromSelection(selection)
+
+  if (selection.count() == 0 || selectionArtboards.count() == 0) {
+    doc.showMessage("Please select an artboard.")
+  } else {
+    if (selectionArtboards.count() > 1) {
+      doc.showMessage("Please select a single artboard.")
+    } else {
+      saveAndUploadArtboard(currentArtboard)
+    }
+  }
+
+  function saveAndUploadArtboard(artboard) {
+    path = getArtboardSavePath(artboard)
+    doc.saveArtboardOrSlice_toFile(artboard, path)
+    uploadArtboard(path)
+  }
+
+  function uploadArtboard(path) {
+    appPath = NSWorkspace.sharedWorkspace().fullPathForApplication("Droplr")
+
+    if (appPath == nil) {
+      doc.showMessage("Droplr is not installed.")
+    } else {
+      uploadSuccess = NSWorkspace.sharedWorkspace().openFile_withApplication(path, "Droplr")
+      if (uploadSuccess) {
+        doc.showMessage("Upload finished!")
+      }
+    }
+  }
+
+  function getArtboardsFromSelection(selection) {
+    artboards = NSMutableArray.array()
+    loop = selection.objectEnumerator()
+
+    while (selectionItem = loop.nextObject()) {
+      if (selectionItem.class() == "MSArtboardGroup") {
+        artboards.addObject(selectionItem)
+      }
+    }
+    return artboards
+  }
+
+  function getArtboardSavePath(artboard) {
+    fileManager = NSFileManager.defaultManager()
+    cachesURL = fileManager.URLsForDirectory_inDomains(NSCachesDirectory, NSUserDomainMask).lastObject()
+    directory = cachesURL.URLByAppendingPathComponent("uk.co.hellomethod.co.uk.upload-to-droplr").path()
+    fullPath = directory + "/" + artboard.name() + ".png"
+    return fullPath
+  }
+}

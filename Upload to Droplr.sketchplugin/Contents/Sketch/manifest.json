@@ -1,0 +1,24 @@
+{
+  "author" : "James Roberts",
+  "commands" : [
+    {
+      "script" : "Upload to Droplr.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "ctrl alt cmd u",
+      "name" : "Upload to Droplr",
+      "identifier" : "upload-to-droplr"
+    }
+  ],
+  "menu" : {
+    "isRoot" : true,
+    "items" : [
+      "upload-to-droplr"
+    ]
+  },
+  "identifier" : "uk.co.hellomethod.upload-to-droplr",
+  "version" : "2.1.2",
+  "description" : "Sketch plugin to upload the selected artboard to Droplr.",
+  "authorEmail" : "james@hellomethod.co.uk",
+  "name" : "Upload to Droplr"
+}
+

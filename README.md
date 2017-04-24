@@ -22,3 +22,5 @@ Send any comments, concerns, or suggestions to [james@hellomethod.co.uk](mailto:
 ## Thanks
 
 Thanks to Mike over at delighted.com for the basis of this plugin taken from his [sketch-upload-to-cloudapp](https://github.com/delighted/sketch-upload-to-cloudapp)
+
+[![Install PLUGIN NAME with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install Upload to Droplr with Sketchpacks")](https://github.com/jimboroberts/sketch-upload-to-droplr)
